@@ -13,8 +13,10 @@ final class FileLogger
 {
     use LoggerTrait;
 
-    public function __construct(public readonly string $path = LOGS_DIR)
-    {
+    public function __construct(
+        public readonly string $path = LOGS_DIR,
+        public readonly string $fileName = 'app.log'
+    ) {
         if (!is_dir($this->path)) {
             mkdir($this->path, recursive: true);
         }
@@ -29,7 +31,7 @@ final class FileLogger
      */
     public function log($level, \Stringable|string $message, array $context = []): void
     {
-        $filePath = "{$this->path}/app.log";
+        $filePath = "{$this->path}/{$this->fileName}";
         $filePath = str_replace('/', DS, $filePath);
 
         $timestamp = $this->timestamp();
