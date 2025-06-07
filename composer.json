@@ -1,6 +1,9 @@
 {
 	"scripts": {
-		"dev": "@php -S localhost:8000 -t public"
+		"dev": [
+			"Composer\\Config::disableProcessTimeout",
+			"@php -S localhost:8000 -t public"
+		]
 	},
 	"autoload": {
 		"psr-4": {
