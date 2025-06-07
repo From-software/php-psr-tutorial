@@ -21,3 +21,7 @@ php -S localhost:8000 -t public/
 
 This will start a local server at `http://localhost:8000` which will serve static files from the `public/` directory and route requests to the `public/index.php` front
 controller.
+
+## PHP Standard Recommendations (PSR)
+
+[View PSRs](https://www.php-fig.org/psr/)
