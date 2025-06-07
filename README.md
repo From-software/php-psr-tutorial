@@ -7,7 +7,13 @@ PHP PSR tutorial. Building a PSR-compliant microframework from scratch.
 Note, we use the PHP built-in server for development purposes.
 This is not recommended for production use, but makes it easy to run and develop the application locally.
 
-To run the application, run the following command in the root directory of the project:
+To run the application, run the following composer script in the root directory of the project:
+
+```bash
+composer run dev
+```
+
+or manually start the PHP built-in server:
 
 ```bash
 php -S localhost:8000 -t public/
