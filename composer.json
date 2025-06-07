@@ -1,0 +1,7 @@
+{
+    "name": "from-software/php-psr-tutorial",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {}
+}
