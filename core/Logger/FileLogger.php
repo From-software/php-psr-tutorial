@@ -13,7 +13,7 @@ final class FileLogger
 {
     use LoggerTrait;
 
-    public function __construct(public readonly string $path)
+    public function __construct(public readonly string $path = LOGS_DIR)
     {
         if (!is_dir($this->path)) {
             mkdir($this->path, recursive: true);
