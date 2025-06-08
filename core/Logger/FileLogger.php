@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Core\Logger;
 
+use Psr\Log\LoggerInterface;
 use RuntimeException;
 
 /**
  * Basic File Logger which logs to an "app.log" file in the specified directory.
  */
-final class FileLogger
+final class FileLogger implements LoggerInterface
 {
     use LoggerTrait;
 
