@@ -35,6 +35,7 @@ final class FileLogger
         $filePath = str_replace('/', DS, $filePath);
 
         $timestamp = $this->timestamp();
+        $level     = $this->parseLevel($level);
 
         $message = $this->interpolate($message, $context);
         $message = "$timestamp [$level] - $message" . PHP_EOL;
